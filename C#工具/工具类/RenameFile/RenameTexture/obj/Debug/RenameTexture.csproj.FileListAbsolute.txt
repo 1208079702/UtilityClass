@@ -1,0 +1,7 @@
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\bin\Debug\RenameTexture.exe.config
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\bin\Debug\RenameTexture.exe
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\bin\Debug\RenameTexture.pdb
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.csprojResolveAssemblyReference.cache
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.csproj.CoreCompileInputs.cache
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.exe
+D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.pdb
