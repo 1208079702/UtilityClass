@@ -5,3 +5,10 @@ D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debu
 D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.csproj.CoreCompileInputs.cache
 D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.exe
 D:\Desktop\常规项目\魔墙工程\工具\RenameTexture\RenameTexture\obj\Debug\RenameTexture.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\bin\Debug\RenameTexture.exe.config
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\bin\Debug\RenameTexture.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\bin\Debug\RenameTexture.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\obj\Debug\RenameTexture.csprojResolveAssemblyReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\obj\Debug\RenameTexture.csproj.CoreCompileInputs.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\obj\Debug\RenameTexture.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\RenameFile\RenameTexture\obj\Debug\RenameTexture.pdb
