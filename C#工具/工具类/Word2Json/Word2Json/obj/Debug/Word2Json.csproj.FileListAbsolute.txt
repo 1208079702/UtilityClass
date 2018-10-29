@@ -22,3 +22,15 @@ D:\Desktop\编程学习总结\ProgramSummary\C#总结\COM交互操作\例子读�
 D:\Desktop\编程学习总结\ProgramSummary\C#总结\COM交互操作\例子读取Word文档\Word2Json\Word2Json\obj\Debug\Word2Json.csproj.CopyComplete
 D:\Desktop\编程学习总结\ProgramSummary\C#总结\COM交互操作\例子读取Word文档\Word2Json\Word2Json\obj\Debug\Word2Json.exe
 D:\Desktop\编程学习总结\ProgramSummary\C#总结\COM交互操作\例子读取Word文档\Word2Json\Word2Json\obj\Debug\Word2Json.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\bin\Debug\Word2Json.exe.config
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\bin\Debug\Word2Json.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\bin\Debug\Word2Json.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Word2Json.csprojResolveAssemblyReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Interop.Office.dll
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Interop.VBIDE.dll
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Interop.Word.dll
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Word2Json.csproj.ResolveComReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Word2Json.csproj.CoreCompileInputs.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Word2Json.csproj.CopyComplete
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Word2Json.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Word2Json\Word2Json\obj\Debug\Word2Json.pdb

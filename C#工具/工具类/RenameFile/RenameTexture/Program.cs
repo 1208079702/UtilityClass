@@ -9,12 +9,13 @@ namespace RenameTexture
     {
         static void Main(string[] args)
         {
-
-            string direcPath = @"D:\Desktop\常规项目\魔墙工程\嘉兴平湖2018.9.30\资料\照片 - 1";
-            RenameTexture(direcPath, 1);
+            string direcPath = @"D:\Desktop\常规项目\幻影成像\昆明市馆\程序\KMHYCX\Assets\StreamingAssets\Clip";
+            //RenameTexture(direcPath, 0);
+            RenameTexture(direcPath);
             Console.WriteLine("转换完成");
             Console.Read();
         }
+
         /// <summary>
         /// 重命名文件，使下标从零开始
         /// </summary>
@@ -41,9 +42,37 @@ namespace RenameTexture
                     }
                     else
                     {
-                        builder.Append(allstr[i]+'\\');
+                        builder.Append(allstr[i] + '\\');
                     }
                 }
+                file.MoveTo(builder.ToString()); //重命名
+            }
+        }
+
+        private static void RenameTexture(string path)
+        {
+            DirectoryInfo info = new DirectoryInfo(path);
+            FileInfo[] files = info.GetFiles();
+            StringBuilder builder = new StringBuilder();
+            int startIndex = 0;
+            foreach (FileInfo file in files)
+            {
+                builder.Clear();
+                string[] allstr = file.FullName.Split('\\');
+                for (int i = 0; i < allstr.Length; i++)
+                {
+                    if (i == allstr.Length - 1)
+                    {
+                        string[] temp = allstr[i].Split('_');
+                        builder.Append(startIndex + "_" + temp[temp.Length - 1] + ".mp4");
+
+                    }
+                    else
+                    {
+                        builder.Append(allstr[i] + '\\');
+                    }
+                }
+                startIndex++;
                 file.MoveTo(builder.ToString()); //重命名
             }
         }

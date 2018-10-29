@@ -1,0 +1,11 @@
+D:\Desktop\NPinyinTest\NPinyin\bin\Debug\NPinyin.dll
+D:\Desktop\NPinyinTest\NPinyin\bin\Debug\NPinyin.pdb
+D:\Desktop\NPinyinTest\NPinyin\obj\Debug\NPinyin.csprojResolveAssemblyReference.cache
+D:\Desktop\NPinyinTest\NPinyin\obj\Debug\NPinyin.csproj.CoreCompileInputs.cache
+D:\Desktop\NPinyinTest\NPinyin\obj\Debug\NPinyin.dll
+D:\Desktop\NPinyinTest\NPinyin\obj\Debug\NPinyin.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyin\bin\Debug\NPinyin.dll
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyin\bin\Debug\NPinyin.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyin\obj\Debug\NPinyin.csproj.CoreCompileInputs.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyin\obj\Debug\NPinyin.dll
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyin\obj\Debug\NPinyin.pdb

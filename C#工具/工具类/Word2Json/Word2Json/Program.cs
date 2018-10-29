@@ -20,7 +20,7 @@ namespace Word2Json
             CloseWord(doc); // 关闭文档
             Console.WriteLine("完成!之后进入json网站将格式转换成可读的格式");
             Console.Read();
-            
+
         }
 
         /// <summary>
@@ -77,31 +77,49 @@ namespace Word2Json
         public static List<Detail> Word2JsonClass(Document doc, int startIndex, int endIndex)
         {
             List<Detail> details = new List<Detail>();
-            int realyStartIndex = 0;                  // 真正的开始下标
-            int count = endIndex - startIndex + 1;    // 根据具体文档的数量
-            int currentIndex = realyStartIndex;
             // 分隔符：不同的word文档，分隔符都是不确定的，可能需要修改
-            char[] ch1 = { '.' };
-            char[] ch2 = { '。' };
+            char[][] ch1 = { new char[] { '.' } };
+            char[][] ch2 = { new char[] { '（' }, new char[] { '(' }, new char[] { '，' }, new char[] { ',' } };
             foreach (Paragraph paragraph in doc.Paragraphs)
             {
                 string str = paragraph.Range.Text;
-                for (int i = currentIndex; i <= count; i++)
+                Match mc = Regex.Match(str, "[0-9]+");
+                if (mc.Length > 0)
                 {
-                    if (str.StartsWith(i.ToString()))
-                    {
-                        currentIndex++;
-                        Detail detail = new Detail();
-                        details.Add(detail);
+                    Detail detail = new Detail();
+                    details.Add(detail);
 
-                        // 以下的根据不同文档需要修改
-                        string[] temp = str.Split(ch1, 2);
-                        detail.Id = int.Parse(temp[0]) - startIndex; //将Id从零开始
-                        string[] temp2 = temp[1].Split(ch2, 2);
-                        detail.Name = temp2[0];
-                        detail.Introduction = temp2[1].Trim();
-                        break;
+                    // 以下的根据不同文档需要修改
+                    string[] temp = null;
+                    for (int i = 0; i < ch1.Length; i++)
+                    {
+                        temp = str.Split(ch1[i], 2);
+                        if (temp.Length == 1)
+                            continue;
+                        else
+                        {
+                            detail.Id = int.Parse(temp[0].Trim()) - startIndex; //将Id从零开始
+                            break;
+                        }
                     }
+                    if (temp == null)
+                        throw new Exception("word解析出错");
+                    detail.Introduction = temp[1].Trim();
+
+                    string[] temp2 = null;
+                    for (int i = 0; i < ch2.Length; i++)
+                    {
+                        temp2 = temp[1].Split(ch2[i], 2);
+                        if (temp2.Length > 1)
+                        {
+                            if (Regex.IsMatch(temp2[0].Trim(), "^[\\u4E00-\\u9FA5\\uf900-\\ufa2d·s]{2,20}$"))
+                            {
+                                detail.Name = temp2[0].Trim();
+                                break;
+                            }
+                        }
+                    }
+                   
                 }
             }
             return details;

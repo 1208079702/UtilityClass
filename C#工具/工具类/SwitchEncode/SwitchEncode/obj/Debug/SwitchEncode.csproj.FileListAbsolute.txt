@@ -1,0 +1,7 @@
+D:\Desktop\SwitchEncode\SwitchEncode\bin\Debug\SwitchEncode.exe.config
+D:\Desktop\SwitchEncode\SwitchEncode\bin\Debug\SwitchEncode.exe
+D:\Desktop\SwitchEncode\SwitchEncode\bin\Debug\SwitchEncode.pdb
+D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.csprojResolveAssemblyReference.cache
+D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.csproj.CoreCompileInputs.cache
+D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.exe
+D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.pdb
