@@ -1,10 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using CreateJson.昆明馆;
 using LitJson;
 
 namespace CreateJson
@@ -13,28 +11,62 @@ namespace CreateJson
     {
         static void Main(string[] args)
         {
-            string direcPath = @"D:\Desktop\常规项目\幻影成像\昆明市馆\程序\KMHYCX\Assets\StreamingAssets\Clip";
-            string jsonPath = @"D:\Desktop\常规项目\幻影成像\昆明市馆\程序\KMHYCX\Assets\StreamingAssets\Config\VideoJson.txt";
-            Write2Json(SetTheJsonObj(direcPath), jsonPath);
+            //string direcPath = @"D:\Desktop\常规项目\幻影成像\昆明市馆\程序\KMHYCX\Assets\StreamingAssets\Clip";
+            //string jsonPath = @"D:\Desktop\常规项目\幻影成像\昆明市馆\程序\KMHYCX\Assets\StreamingAssets\Config\VideoJson.txt";
+            //Write2Json(SetTheJsonObj(direcPath), jsonPath);
+
+            //string KunmingdirecPath = @"D:\Desktop\常规项目\飞趣360\昆明市馆\资源\图片";
+            //string KunmingjsonPath = @"D:\Desktop\常规项目\飞趣360\昆明市馆\资源\图片\TextureJson.json";
+            //Write2Json(SetTheJsonObj(KunmingdirecPath), KunmingjsonPath);
+
+
+
+
             Console.WriteLine("转换完成");
             Console.Read();
         }
+        ///// <summary>
+        ///// 建德高铁新区馆
+        ///// </summary>
+        ///// <param name="path"></param>
+        ///// <returns></returns>
+        //private static List<Detail> SetTheJsonObj(string path)
+        //{
+        //    List<Detail> details =new List<Detail>();
+        //    DirectoryInfo info = new DirectoryInfo(path);
+        //    FileInfo[] files = info.GetFiles();
+        //    foreach (FileInfo file in files)
+        //    {
+        //        string[] allstr = file.FullName.Split('\\');
+        //        string[] temp = allstr[allstr.Length - 1].Split('_');
+        //        Detail detail = new Detail(int.Parse(temp[0]),temp[1].Split('.')[0]);
+        //        details.Add(detail);
+        //    }
+        //    return details;
+        //}
 
-        private static List<Detail> SetTheJsonObj(string path)
+        /// <summary>
+        /// 昆明馆
+        /// </summary>
+        /// <param name="path"></param>
+        public static List<昆明馆.Detail> SetTheJsonObj(string path)
         {
-            List<Detail> details =new List<Detail>();
+            List<昆明馆.Detail> details = new List<昆明馆.Detail>();
             DirectoryInfo info = new DirectoryInfo(path);
-            FileInfo[] files = info.GetFiles();
-            foreach (FileInfo file in files)
+            DirectoryInfo[] directs = info.GetDirectories();
+            for (int i = 0; i < directs.Length; i++)
             {
-                string[] allstr = file.FullName.Split('\\');
-                string[] temp = allstr[allstr.Length - 1].Split('_');
-                Detail detail = new Detail(int.Parse(temp[0]),temp[1].Split('.')[0]);
+                FileInfo[] files = directs[i].GetFiles();
+                List<string> textureName =new List<string>();
+                foreach (FileInfo file in files)
+                {
+                    textureName.Add(file.Name); 
+                }
+                昆明馆.Detail detail = new 昆明馆.Detail(i, directs[i].Name, textureName);
                 details.Add(detail);
             }
             return details;
         }
-
 
         /// <summary>
         /// 将Json写入文档

@@ -130,7 +130,7 @@ public static class MouseSimulater
             SetCursorPos((int)x, (int)y);
             return true;
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return false;
         }

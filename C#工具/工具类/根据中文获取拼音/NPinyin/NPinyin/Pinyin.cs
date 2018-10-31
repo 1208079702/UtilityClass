@@ -188,7 +188,7 @@ namespace NPinyin
         /// </summary>
         /// <param name="ch">字符</param>
         /// <returns>文本索引值</returns>
-        private static short GetHashIndex(char ch)
+        public static short GetHashIndex(char ch)
         {
             return (short)((uint)ch % PyCode.codes.Length);
         }

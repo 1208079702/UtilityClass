@@ -8,6 +8,7 @@
  *      使用方法：
  *            
  *            需要触发 鼠标/touch 事件的对象，使用Bind方法，然后调用触发事件，添加自定义委托
+ *            在OnEnable中绑定，在OnDisable中解绑
  *
  *      提示：eventData 的坐标，都是相对于Unity屏幕的左下角，即Unity坐标系坐标
  *
@@ -137,7 +138,26 @@ public class EventTriggerListener : EventTrigger
         triggerListener.isPass = true;
         return triggerListener;
     }
-
+    /// <summary>
+    /// 对 go 进行一键解绑
+    /// </summary>
+    /// <param name="go"></param>
+    public static void UnBindAll(GameObject go)
+    {
+        if (go == null)
+            return;
+        EventTriggerListener triggerListener = go.GetComponent<EventTriggerListener>();
+        if (triggerListener == null)
+            return;
+        triggerListener.onClick = null;
+        triggerListener.onEnter = null;
+        triggerListener.onExit = null;
+        triggerListener.onDown = null;
+        triggerListener.onUp = null;
+        triggerListener.onDrag = null;
+        triggerListener.onSelect = null;
+        triggerListener.onUpdateSelect = null;
+    }
     /// <summary>
     /// 穿透方法
     /// </summary>

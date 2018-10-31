@@ -50,7 +50,6 @@ namespace NPinyinTest
                 string s = Pinyin.ConvertEncoding(m, Encoding.UTF8, gb2312);
                 Console.WriteLine("药品：{0}\n简码：{1}\n", s, Pinyin.GetInitials(s, gb2312));
             }
-
             Console.ReadKey();
         }
     }
