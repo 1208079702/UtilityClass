@@ -14,12 +14,23 @@ namespace SwitchEncode
             while (true)
             {
                 string path = Console.ReadLine();
-                string path2 = @"D:\utf.txt";
-                AnsiSwitchFile(path, path2);
+                //string path2 = @"D:\utf.txt";
+                //AnsiSwitchFile(path, path2);
+
+                SwitchEncode(path,Encoding.Default, Encoding.UTF8);
                 Console.WriteLine("转换完成");
             }
         }
 
+        private static void SwitchEncode(string sourcePath,Encoding sourcEncoding,Encoding targetEncoding)
+        {
+            
+            string source = File.ReadAllText(sourcePath);
+            byte[] sourceBytes = sourcEncoding.GetBytes(source);
+            byte[] targetBytes= Encoding.Convert(sourcEncoding, targetEncoding, sourceBytes);
+            string target = targetEncoding.GetString(targetBytes);
+            File.WriteAllText(sourcePath,target);
+        }
 
         /// <summary>
         /// ANSI  转到  UTF-8

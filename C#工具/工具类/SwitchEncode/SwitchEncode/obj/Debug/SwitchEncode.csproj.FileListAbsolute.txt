@@ -5,3 +5,10 @@ D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.csprojResolveAssembl
 D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.csproj.CoreCompileInputs.cache
 D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.exe
 D:\Desktop\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\bin\Debug\SwitchEncode.exe.config
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\bin\Debug\SwitchEncode.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\bin\Debug\SwitchEncode.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.csprojResolveAssemblyReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.csproj.CoreCompileInputs.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\SwitchEncode\SwitchEncode\obj\Debug\SwitchEncode.pdb
