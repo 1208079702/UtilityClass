@@ -12,8 +12,8 @@ namespace Word2Json
     {
         static void Main(string[] args)
         {
-            string jsonPath = @"D:\Desktop\常规项目\魔墙工程\嘉兴平湖2018.9.30\Detail.json";
-            string wordPath = @"D:\Desktop\常规项目\魔墙工程\嘉兴平湖2018.9.30\资料\互动魔镜墙脚本8.13.docx";//文档的路径
+            string jsonPath = @"D:\Desktop\Detail.json";
+            string wordPath = @"D:\Desktop\常规项目\魔墙\嘉兴平湖\资料\互动魔镜墙脚本8.13.docx";//文档的路径
             Document doc = ReadWord(wordPath);
             List<Detail> details = Word2JsonClass(doc, 1, 101);
             Write2Json(details, jsonPath);
@@ -119,7 +119,7 @@ namespace Word2Json
                             }
                         }
                     }
-                   
+                    detail.GroupName = "默认组";
                 }
             }
             return details;
