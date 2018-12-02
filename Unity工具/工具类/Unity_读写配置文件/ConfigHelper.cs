@@ -92,6 +92,7 @@ public class ConfigHelper : MonoBehaviour
         if (result == false)
             throw new Exception("写入文件失败");
     }
+
     private static bool WriteIniData(string section, string key, string value, string iniFilePath)
     {
         bool result = false;
