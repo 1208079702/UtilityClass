@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using LitJson;
@@ -12,15 +14,57 @@ namespace Word2Json
     {
         static void Main(string[] args)
         {
-            string jsonPath = @"D:\Desktop\Detail.json";
-            string wordPath = @"D:\Desktop\常规项目\魔墙\嘉兴平湖\资料\互动魔镜墙脚本8.13.docx";//文档的路径
-            Document doc = ReadWord(wordPath);
-            List<Detail> details = Word2JsonClass(doc, 1, 101);
-            Write2Json(details, jsonPath);
-            CloseWord(doc); // 关闭文档
+            //string jsonPath = @"D:\Desktop\Detail.json";
+            //string wordPath = @"D:\Desktop\常规项目\魔墙\嘉兴平湖\资料\互动魔镜墙脚本8.13.docx";//文档的路径
+            //Document doc = ReadWord(wordPath);
+            //List<Detail> details = Word2JsonClass(doc, 1, 101);
+            //Write2Json(details, jsonPath);
+
+           
+            CD();
+            Process[] process = Process.GetProcessesByName("wps");
+            foreach (Process process1 in process)
+            {
+                process1.Kill();
+            }
+            //CloseWord(doc); // 关闭文档
             Console.WriteLine("完成!之后进入json网站将格式转换成可读的格式");
             Console.Read();
 
+        }
+
+        private static void CD()
+        {
+            int index = 0;
+            List<ScenicSpot> list = new List<ScenicSpot>();
+            string path = @"D:\Desktop\成都景点";
+            DirectoryInfo info = new DirectoryInfo(path);
+
+            foreach (DirectoryInfo directoryInfo in info.GetDirectories())
+            {
+                foreach (FileInfo file in directoryInfo.GetFiles())
+                {
+                    if(file.Name.Contains("$"))
+                        continue;
+                    Console.WriteLine(file.Name);
+                    ScenicSpot temp = new ScenicSpot();
+                    temp.Id = index;
+                    temp.LikeCount = 100;
+                    temp.Standby1 = null;
+                    temp.Standby2 = null;
+                    temp.Standby3 = null;
+                    temp.Name = file.Name.Split('.')[0];
+                    Document doc = ReadWord(file.FullName);
+                    foreach (Paragraph paragraph in doc.Paragraphs)
+                    {
+                        temp.Introduction += paragraph.Range.Text + "\n";
+                    }
+                    index++;
+                    list.Add(temp);
+                }
+            }
+
+            Write2Json(list, @"D:\Desktop\ScenicSpot.json");
         }
 
         /// <summary>

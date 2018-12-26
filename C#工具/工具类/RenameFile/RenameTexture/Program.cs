@@ -9,7 +9,7 @@ namespace RenameTexture
     {
         static void Main(string[] args)
         {
-            string direcPath = @"D:\Desktop\常规项目\幻影成像\昆明市馆\程序\KMHYCX\Assets\StreamingAssets\Clip";
+            string direcPath = @"D:\Desktop\常规项目\拍照魔墙\资料\mqPhotos";
             //RenameTexture(direcPath, 0);
             RenameTexture(direcPath);
             Console.WriteLine("转换完成");
@@ -63,9 +63,7 @@ namespace RenameTexture
                 {
                     if (i == allstr.Length - 1)
                     {
-                        string[] temp = allstr[i].Split('_');
-                        builder.Append(startIndex + "_" + temp[temp.Length - 1] + ".mp4");
-
+                        builder.Append(startIndex + ".jpg");
                     }
                     else
                     {
