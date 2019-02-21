@@ -13,8 +13,8 @@ D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\bin\Debug\NPinyinTest.pdb
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\bin\Debug\NPinyin.dll
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\bin\Debug\NPinyin.pdb
-D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\obj\Debug\NPinyinTest.csprojResolveAssemblyReference.cache
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\obj\Debug\NPinyinTest.csproj.CoreCompileInputs.cache
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\obj\Debug\NPinyinTest.csproj.CopyComplete
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\obj\Debug\NPinyinTest.exe
 D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\obj\Debug\NPinyinTest.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\根据中文获取拼音\NPinyin\NPinyinTest\obj\Debug\NPinyinTest.csprojAssemblyReference.cache
