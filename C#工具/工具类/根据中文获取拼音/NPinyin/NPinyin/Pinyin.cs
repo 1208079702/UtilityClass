@@ -14,11 +14,9 @@
  *   { 
  *     g(f(x)) = pos(x)
  *     
- * 其中, pos(x)为字符x所属字符串所在的PyCode.codes的数组下标, 然后散列到同
- * PyCode.codes长度相同长度的一个散列表中PyHash.hashes）。
- * 当检索一个汉字的拼音时，首先从PyHash.hashes中获取和
- * 对应的PyCode.codes中数组下标，然后从对应字符串查找，当到要查找的字符时，字符
- * 串的前6个字符即包含了该字的拼音。
+ * 其中, pos(x)为字符x所属字符串所在的PyCode.codes的数组下标, 然后散列到同PyCode.codes长度相同长度的一个散列表中PyHash.hashes）。
+ *
+ * 当检索一个汉字的拼音时，首先从PyHash.hashes中获取和对应的PyCode.codes中数组下标，然后从对应字符串查找，当到要查找的字符时，字符串的前6个字符即包含了该字的拼音。
  * 
  * 此种方法的好处一是节约了存储空间，二是兼顾了查询效率。
  *
@@ -48,7 +46,6 @@ namespace NPinyin
         /// </summary>
         /// <param name="text">编码为UTF8的文本</param>
         /// <returns>返回中文对应的拼音首字母</returns>
-
         public static string GetInitials(string text)
         {
             text = text.Trim();
@@ -56,9 +53,9 @@ namespace NPinyin
             for (var i = 0; i < text.Length; ++i)
             {
                 string py = GetPinyin(text[i]);
-                if (py != "") chars.Append(py[0]);
+                if (py != "")
+                    chars.Append(py[0]);
             }
-
             return chars.ToString().ToUpper();
         }
 
@@ -67,12 +64,12 @@ namespace NPinyin
         /// 取中文文本的拼音首字母
         /// </summary>
         /// <param name="text">文本</param>
-        /// <param name="encoding">源文本的编码</param>
+        /// <param name="srcEncoding">源文本的编码</param>
         /// <returns>返回encoding编码类型中文对应的拼音首字母</returns>
-        public static string GetInitials(string text, Encoding encoding)
+        public static string GetInitials(string text, Encoding srcEncoding)
         {
-            string temp = ConvertEncoding(text, encoding, Encoding.UTF8);
-            return ConvertEncoding(GetInitials(temp), Encoding.UTF8, encoding);
+            string temp = ConvertEncoding(text, srcEncoding, Encoding.UTF8);
+            return ConvertEncoding(GetInitials(temp), Encoding.UTF8, srcEncoding);
         }
 
 
