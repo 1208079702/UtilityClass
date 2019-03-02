@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using LitJson;
+using Newtonsoft.Json;
 
 /*
  *  行包车间 0
@@ -39,9 +40,9 @@ namespace ConsoleApp3
         //private static int inss =0;
         static void Main(string[] args)
         {
-            OpenExcel(path, texPath, audioPath);
-            Obj2jSON(jsondetail, lists);
-            Obj2jSON(jdonscore, listscores);
+            //OpenExcel(path, texPath, audioPath);
+            //Obj2jSON(jsondetail, lists);
+            //Obj2jSON(jdonscore, listscores);
             //RemaneTex(@"D:\Desktop\资料\车间\虹桥\周五前党办照片\检1");
             //List<Score> list = new List<Score>();
             //for (int i = 100000; i < 100144; i++)
@@ -55,6 +56,10 @@ namespace ConsoleApp3
             //string strjson = JsonMapper.ToJson(list);
             //File.WriteAllText(jdonscore, strjson);
 
+
+            string excPath = @"D:\Desktop\Building.xlsx";
+            string jsonPath = @"D:\Desktop\Data_Building.json";
+            OpenXHExcel(excPath, jsonPath);
 
             Console.WriteLine("已完成");
             Console.Read();
@@ -257,6 +262,71 @@ namespace ConsoleApp3
             }
         }
 
+
+        #region 徐汇变迁
+
+        private static void OpenXHExcel(string excelPath, string jsonpath)
+        {
+            object missing = System.Reflection.Missing.Value;
+            Application excel = new Application();//lauch excel application
+            excel.Visible = false;
+            excel.UserControl = true;
+            // 以只读的形式打开EXCEL文件
+            Workbook wb = excel.Application.Workbooks.Open(excelPath, missing, true, missing, missing, missing, missing, missing, missing, true, missing, missing, missing, missing, missing);
+            //取得第一个工作薄
+            Worksheet ws = (Worksheet)wb.Worksheets.get_Item(1);
+
+            int rowsint = ws.UsedRange.Cells.Rows.Count; //得到行数
+            int columnsint = ws.UsedRange.CurrentRegion.Columns.Count;//得到列数
+            Console.WriteLine("行数 " + rowsint);
+            Console.WriteLine("列数 " + columnsint);
+
+            List<Data_Building> list = new List<Data_Building>();
+            for (int i = 2; i < rowsint + 1; i++)
+            {
+                Range rng1 = ws.Cells.get_Range("A" + i, "P" + i);   //item
+                object[,] arryItem = (object[,])rng1.Value2;
+                int row = arryItem.GetLength(0);    //1
+                for (int j = 1; j < row + 1; j++)
+                {
+                    Data_Building build = new Data_Building();
+                    list.Add(build);
+                    build.Id = int.Parse(arryItem[j, 1].ToString());
+                    build.Identification = arryItem[j, 2].ToString();
+                    build.MinYears = int.Parse(arryItem[j, 3].ToString());
+                    build.MaxYears = int.Parse(arryItem[j, 4].ToString());
+                    build.Type = arryItem[j, 5] == null ? null : arryItem[j, 5].ToString();
+                    build.Name = arryItem[j, 6].ToString();
+                    build._IdentificationMap = arryItem[j, 7] == null ? "0" : arryItem[j, 7].ToString();
+                    build.PictureLocationX = int.Parse(arryItem[j, 8] == null ? "0" : arryItem[j, 8].ToString());
+                    build.PictureLocationY = int.Parse(arryItem[j, 9] == null ? "0" : arryItem[j, 9].ToString());
+                    build.PopUpsPointX = int.Parse(arryItem[j, 10] == null ? "0" : arryItem[j, 10].ToString());
+                    build.PopUpsPointY = int.Parse(arryItem[j, 11] == null ? "0" : arryItem[j, 11].ToString());
+                    build.PopUpsImageSizeX = int.Parse(arryItem[j, 12] == null ? "0" : arryItem[j, 12].ToString());
+                    build.PopUpsImageSizeY = int.Parse(arryItem[j, 13] == null ? "0" : arryItem[j, 13].ToString());
+                    build._PopUpsImage = arryItem[j, 14] == null ? null : arryItem[j, 14].ToString();
+                    build._InnerImaPath = new List<string>();
+                    string[] paths = arryItem[j, 15].ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                    for (int k = 0; k < paths.Length; k++)
+                    {
+                        build._InnerImaPath.Add(paths[k]);
+                    }
+                    build.InnerTxt = new List<string>();
+                    string[] txts = arryItem[j, 16].ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                    for (int k = 0; k < txts.Length; k++)
+                    {
+                        build.InnerTxt.Add(txts[k]);
+                    }
+
+
+                }
+            }
+
+            string str = JsonConvert.SerializeObject(list);
+            File.WriteAllText(jsonpath, str);
+        }
+
+        #endregion
 
     }
 

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using LitJson;
+using Newtonsoft.Json;
 
 namespace CreateJson
 {
@@ -18,8 +20,6 @@ namespace CreateJson
             //string KunmingdirecPath = @"D:\Desktop\常规项目\飞趣360\昆明市馆\资源\图片";
             //string KunmingjsonPath = @"D:\Desktop\常规项目\飞趣360\昆明市馆\资源\图片\TextureJson.json";
             //Write2Json(SetTheJsonObj(KunmingdirecPath), KunmingjsonPath);
-
-
 
 
             Console.WriteLine("转换完成");
@@ -57,16 +57,20 @@ namespace CreateJson
             for (int i = 0; i < directs.Length; i++)
             {
                 FileInfo[] files = directs[i].GetFiles();
-                List<string> textureName =new List<string>();
+                List<string> textureName = new List<string>();
                 foreach (FileInfo file in files)
                 {
-                    textureName.Add(file.Name); 
+                    textureName.Add(file.Name);
                 }
                 昆明馆.Detail detail = new 昆明馆.Detail(i, directs[i].Name, textureName);
                 details.Add(detail);
             }
             return details;
         }
+
+
+
+
 
         /// <summary>
         /// 将Json写入文档

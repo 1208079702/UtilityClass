@@ -27,3 +27,13 @@ D:\Desktop\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreComp
 D:\Desktop\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CopyComplete
 D:\Desktop\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.exe
 D:\Desktop\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\bin\Debug\Newtonsoft.Json.dll
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.csprojAssemblyReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.ResolveComReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CopyComplete
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\Excel2Json\资料转Json工具\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
