@@ -30,7 +30,9 @@ public class WindowSetting : MonoBehaviour {
     static extern bool SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
     [DllImport("User32.dll", EntryPoint = "FindWindow")]
     private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-    IntPtr hwindow;
+
+
+    private IntPtr hwindow;
 
 
     const uint SWP_SHOWWINDOW = 0x0040;
@@ -41,27 +43,25 @@ public class WindowSetting : MonoBehaviour {
     void Start()
     {
         //获取窗口句柄
-        //        hwindow = FindWindow(null, "photowall");
         hwindow = FindWindow(null, Consts.windowsIntPtr);
         StartCoroutine(FullScreen());
     }
-    
+
     IEnumerator FullScreen()
     {
         //窗口切换带边框
-        //窗口切换带边框
-        //Screen.SetResolution(7680, 3240, false);
-        Screen.SetResolution(Consts.screen_width,Consts.screen_height,false);
+        //Screen.SetResolution(Consts.screen_width,Consts.screen_height,false);
         //鼠标显示状态设置
         Cursor.visible = Consts.showcursor;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
+
         if (Consts.fullscreen == "0")
         {
             Screen.SetResolution(Consts.screen_width, Consts.screen_height, true);
         }
         else if (Consts.fullscreen == "1")
         {
-            //Screen.SetResolution(Consts.screen_width, Consts.screen_height, false);
+            Screen.SetResolution(Consts.screen_width, Consts.screen_height, false);
         }
         else
         {
@@ -89,8 +89,6 @@ public class WindowSetting : MonoBehaviour {
         //yield return new WaitForSeconds(5);
         //SceneManager.LoadScene(1);
     }
-    //void Update()
-    //{
-        
-    //}
+
+
 }
