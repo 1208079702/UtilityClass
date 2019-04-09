@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using CreateJson.武汉光谷;
 using LitJson;
 using Newtonsoft.Json;
 
@@ -21,6 +22,9 @@ namespace CreateJson
             //string KunmingjsonPath = @"D:\Desktop\常规项目\飞趣360\昆明市馆\资源\图片\TextureJson.json";
             //Write2Json(SetTheJsonObj(KunmingdirecPath), KunmingjsonPath);
 
+            string jsonPath = @"D:\Desktop\IndustryDetail.json";
+
+            Write2Json2(SetTheJsonObj2(), jsonPath);
 
             Console.WriteLine("转换完成");
             Console.Read();
@@ -69,6 +73,51 @@ namespace CreateJson
         }
 
 
+        public static List<武汉光谷.IndustryDetail> SetTheJsonObj2(/*string path*/)
+        {
+            Dictionary<int, Dictionary<int, Dictionary<int, int>>> Scores = new Dictionary<int, Dictionary<int, Dictionary<int, int>>>();
+            Dictionary<int, Dictionary<int, int>> companyScores = new Dictionary<int, Dictionary<int, int>>();
+            Dictionary<int, int> companyTexScores = new Dictionary<int, int>();
+
+
+            //Dictionary<string, IndustryDetail> industrys = new Dictionary<string, IndustryDetail>();
+            List<武汉光谷.IndustryDetail> industrys = new List<IndustryDetail>();
+            IndustryDetail industry = new IndustryDetail();
+            industry.Id = 0;
+            industry.Name = "光电子信息产业";
+            industry.Introduction =
+                "光谷是我国光通信产业的发源地，我国最大的光纤光缆、光器件研发和生产基地，我国最大的光通信技术研发基地和激光产业发展引领区，中国最大的中小尺寸显示面板生产和研发基地。光纤光缆的生产规模居全球第一，代表国家参与世界竞争的品牌。";
+            industrys.Add(industry);
+            //industrys.Add(industry);
+            //industrys.Add(industry.Name,industry);
+            //Dictionary<string,CompanyDetail> companys =new Dictionary<string, CompanyDetail>();
+            Scores.Add(industry.Id, companyScores);
+
+
+            List<CompanyDetail> companys = new List<CompanyDetail>();
+            industry.CompanyDetails = companys;
+            CompanyDetail company = new CompanyDetail();
+            company.Id = 0;
+            company.Company = "中国信息通信科技集团有限公司";
+            company.CompanyIntroduction =
+                "烽火科技集团是国际知名的信息通信网络产品与解决方案提供商。已跻身全球光通信最具竞争力企业十强，其中，光传输产品收入全球前五；宽带接入产品收入全球前四；光缆综合实力全球前四，连续八年位列中国光缆企业出口第一。";
+            company.TextureDetails = new Dictionary<int, TextureDetail>();
+            TextureDetail tex = new TextureDetail();
+            tex.Id = 0;
+            tex.Path = "0.jpg";
+            tex.Introduction = "【高速光器件测试】中国信科集团（烽火科技）研发人员正在对光系统核心芯片进行检测";
+            company.TextureDetails.Add(tex.Id, tex);
+
+            companys.Add(company);
+            //companys.Add(company);
+            //companys.Add(company.Company,company);
+            //companys.Add(company.Company+"2", company);
+            companyScores.Add(company.Id, companyTexScores);
+            companyTexScores.Add(tex.Id,100);
+
+            Write2Json2(Scores, @"D:\Desktop\ScoreDetail.json");
+            return industrys;
+        }
 
 
 
@@ -112,6 +161,12 @@ namespace CreateJson
                 }
             }
             return text;
+        }
+
+        public static void Write2Json2(object objJson, string jsonpath)
+        {
+            string jsonstr = JsonConvert.SerializeObject(objJson);
+            File.WriteAllText(jsonpath, jsonstr);
         }
     }
 }

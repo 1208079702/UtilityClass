@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -9,7 +10,7 @@ namespace RenameTexture
     {
         static void Main(string[] args)
         {
-            string direcPath = @"D:\Desktop\常规项目\拍照魔墙\资料\mqPhotos";
+            string direcPath = @"D:\Desktop\Texture\数字经济\卓讯互动公司";
             //RenameTexture(direcPath, 0);
             RenameTexture(direcPath);
             Console.WriteLine("转换完成");
@@ -59,19 +60,22 @@ namespace RenameTexture
             {
                 builder.Clear();
                 string[] allstr = file.FullName.Split('\\');
-                for (int i = 0; i < allstr.Length; i++)
-                {
-                    if (i == allstr.Length - 1)
-                    {
-                        builder.Append(startIndex + ".jpg");
-                    }
-                    else
-                    {
-                        builder.Append(allstr[i] + '\\');
-                    }
-                }
-                startIndex++;
-                file.MoveTo(builder.ToString()); //重命名
+                Console.WriteLine(allstr[allstr.Length - 1]);
+                //for (int i = 0; i < allstr.Length; i++)
+                //{
+                //    if (i == allstr.Length - 1)
+                //    {
+                //        builder.Append(startIndex + "." + allstr[i].Split('.')[1].ToLower());
+                //    }
+                //    else
+                //    {
+                //        builder.Append(allstr[i] + '\\');
+                //    }
+                //}
+                //startIndex++;
+
+                //file.MoveTo(builder.ToString());
+
             }
         }
     }

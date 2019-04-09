@@ -54,6 +54,10 @@
     <Compile Include="建德高铁新区馆\Detail.cs" />
     <Compile Include="徐汇变迁\Data_Building.cs" />
     <Compile Include="昆明馆\Detail.cs" />
+    <Compile Include="武汉光谷\CompanyDetail.cs" />
+    <Compile Include="武汉光谷\CompanyScore.cs" />
+    <Compile Include="武汉光谷\IndustryDetail.cs" />
+    <Compile Include="武汉光谷\TextureDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
