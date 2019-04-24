@@ -1,0 +1,7 @@
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\bin\Debug\ReSizeTexture.exe.config
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\bin\Debug\ReSizeTexture.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\bin\Debug\ReSizeTexture.pdb
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\obj\Debug\ReSizeTexture.csprojAssemblyReference.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\obj\Debug\ReSizeTexture.csproj.CoreCompileInputs.cache
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\obj\Debug\ReSizeTexture.exe
+D:\Desktop\编程工具\UtilityClass\C#工具\工具类\ReSizeTexture\ReSizeTexture\obj\Debug\ReSizeTexture.pdb

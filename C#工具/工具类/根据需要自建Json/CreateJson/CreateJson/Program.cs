@@ -76,9 +76,11 @@ namespace CreateJson
         public static List<武汉光谷.IndustryDetail> SetTheJsonObj2(/*string path*/)
         {
             Dictionary<int, Dictionary<int, Dictionary<int, int>>> Scores = new Dictionary<int, Dictionary<int, Dictionary<int, int>>>();
+
             Dictionary<int, Dictionary<int, int>> companyScores = new Dictionary<int, Dictionary<int, int>>();
             Dictionary<int, int> companyTexScores = new Dictionary<int, int>();
 
+            
 
             //Dictionary<string, IndustryDetail> industrys = new Dictionary<string, IndustryDetail>();
             List<武汉光谷.IndustryDetail> industrys = new List<IndustryDetail>();

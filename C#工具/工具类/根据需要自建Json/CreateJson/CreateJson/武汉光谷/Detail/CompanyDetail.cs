@@ -33,7 +33,7 @@ namespace CreateJson.武汉光谷
         /// <summary>
         /// 备用3
         /// </summary>
-        public string Standby3 { get; set; }
+        public string Standby30 { get; set; }
 
 
         public CompanyDetail()

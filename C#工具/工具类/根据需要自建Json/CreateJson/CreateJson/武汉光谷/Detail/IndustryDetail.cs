@@ -11,8 +11,6 @@ namespace CreateJson.武汉光谷
         public int Id { get; set; }
         public string Name { get; set; }
         public string Introduction { get; set; }
-
-        //public Dictionary<string, CompanyDetail> CompanyDetails { get; set; }
         public List<CompanyDetail> CompanyDetails { get; set; }
     }
 }
